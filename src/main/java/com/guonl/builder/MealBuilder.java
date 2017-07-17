@@ -1,5 +1,8 @@
 package com.guonl.builder;
 
+/*
+ * 
+ */
 public class MealBuilder {
 
 	public Meal prepareVegMeal() {

@@ -3,6 +3,10 @@ package com.guonl.builder;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * 面向对象的实现
+ * meal的构成
+ */
 public class Meal {
 	private List<Item> items = new ArrayList<Item>();
 
