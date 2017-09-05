@@ -14,7 +14,7 @@ public class DoGET {
         CloseableHttpClient httpclient = HttpClients.createDefault();
 
         // 创建http GET请求
-        HttpGet httpGet = new HttpGet("http://www.9air.com/aq/GetFlightLine");
+        HttpGet httpGet = new HttpGet("http://www.baidu.com");
 
         CloseableHttpResponse response = null;
         try {

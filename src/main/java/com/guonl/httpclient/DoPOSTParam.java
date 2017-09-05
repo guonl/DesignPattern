@@ -12,6 +12,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+
+
 public class DoPOSTParam {
 
     public static void main(String[] args) throws Exception {
@@ -20,17 +22,17 @@ public class DoPOSTParam {
         CloseableHttpClient httpclient = HttpClients.createDefault();
 
         // 创建http POST请求
-        HttpPost httpPost = new HttpPost("http://manage.taotao.com/rest/content");
+        HttpPost httpPost = new HttpPost("http://localhost:8080/mmall/user/login.do");
 
         // 设置2个post参数，一个是scope、一个是q
         List<NameValuePair> parameters = new ArrayList<NameValuePair>(0);
-        parameters.add(new BasicNameValuePair("categoryId", "41"));
-        parameters.add(new BasicNameValuePair("title", "11AD1"));
-        parameters.add(new BasicNameValuePair("subTitle", "java"));
-        parameters.add(new BasicNameValuePair("titleDesc", "java"));
-        parameters.add(new BasicNameValuePair("url", "java"));
-        parameters.add(new BasicNameValuePair("pic", "java"));
-        parameters.add(new BasicNameValuePair("content", "java"));
+        parameters.add(new BasicNameValuePair("username", "admin"));
+        parameters.add(new BasicNameValuePair("password", "admin"));
+//        parameters.add(new BasicNameValuePair("subTitle", "java"));
+//        parameters.add(new BasicNameValuePair("titleDesc", "java"));
+//        parameters.add(new BasicNameValuePair("url", "java"));
+//        parameters.add(new BasicNameValuePair("pic", "java"));
+//        parameters.add(new BasicNameValuePair("content", "java"));
         // 构造一个form表单式的实体
         UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(parameters);
         // 将请求实体设置到httpPost对象中
@@ -41,7 +43,7 @@ public class DoPOSTParam {
             // 执行请求
             response = httpclient.execute(httpPost);
             // 判断返回状态是否为200
-            if (response.getStatusLine().getStatusCode() == 201) {
+            if (response.getStatusLine().getStatusCode() == 200) {
                 System.out.println("新增内容成功了。。。。。。。");
                 String content = EntityUtils.toString(response.getEntity(), "UTF-8");
                 System.out.println(content);

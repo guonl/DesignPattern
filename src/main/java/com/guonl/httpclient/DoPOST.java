@@ -14,7 +14,7 @@ public class DoPOST {
         CloseableHttpClient httpclient = HttpClients.createDefault();
 
         // 创建http POST请求
-        HttpPost httpPost = new HttpPost("http://www.taotao.com/");
+        HttpPost httpPost = new HttpPost("http://www.baidu.com");
 
         CloseableHttpResponse response = null;
         try {
