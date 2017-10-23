@@ -46,7 +46,7 @@ public class ClassPathResource {
 	
 	public Boolean checkCarNo(String carNo){
 //		^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$
-		Pattern p = Pattern.compile("^[\u4e00-\u9fa5]{1}-[A-Z]{1}[A-Z_0-9]{5}$");
+		Pattern p = Pattern.compile("^[\u4e00-\u9fa5]{1}-[A-Z]{1}[A-Z_0-9]{5,6}$");
 		Matcher m = p.matcher(carNo.toUpperCase());
 		System.out.println(m.matches());
 		System.out.println(carNo.toUpperCase());
@@ -59,7 +59,7 @@ public class ClassPathResource {
 //		this.isMobileNO("18221825926");
 //		this.isMobileNO2("18221825926");
 //		this.calendar();
-		this.checkCarNo("沪-a12g45");
+		this.checkCarNo("沪-a12g4");
 	}
 
 }
