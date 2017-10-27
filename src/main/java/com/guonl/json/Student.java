@@ -16,10 +16,10 @@ public class Student {
   
     // getter setter  
   
-    @Override  
+    /*@Override  
     public String toString() {  
         return "Student [stuNo=" + stuNo + ", stuName=" + stuName + "]";  
-    }
+    }*/
 
 	public String getStuNo() {
 		return stuNo;
@@ -35,7 +35,11 @@ public class Student {
 
 	public void setStuName(String stuName) {
 		this.stuName = stuName;
-	}  
+	}
+
+
+	
+	
     
     
   
